@@ -1,0 +1,51 @@
+  MOV [40], 0
+  MOV [41], 1
+  MOV [42], 4
+  MOV [43], 8
+  MOV [44], 32
+  MOV [45], 2
+  MOV [46], 4
+  MOV [51], 0
+  MOV [52], 0
+LOOP_ALL:
+  IN [60]
+  JUMPIF KEY2, [60], [46]
+  JUMPIF KEY1, [60], [45]
+  JUMP UPDATE
+KEY1:
+  MOV [51], 1
+  JUMP UPDATE
+KEY2:
+  MOV [51], 0
+  JUMP UPDATE
+UPDATE:
+  ADD [52], [52], [42]
+  JUMPIF RESET_ROCK, [52], [44]
+  JUMP DRAW_CLEAR
+RESET_ROCK:
+  MOV [52], 0
+DRAW_CLEAR:
+  MOV [61], 0
+DRAW_CLEAR_LOOP:
+  ADD [[61]], [40], [40]
+  ADD [61], [61], [41]
+  JUMPIF DRAW_ROCK, [61], [44]
+  JUMP DRAW_CLEAR_LOOP
+DRAW_ROCK:
+  ADD [62], [52], [40]
+  ADD [[62]], [41], [40]
+  ADD [62], [62], [41]
+  ADD [[62]], [41], [40]
+DRAW_CAR_L:
+  JUMPIF DRAW_CAR_R, [51], [41]
+  MOV [24], 1
+  MOV [25], 1
+  MOV [28], 1
+  MOV [29], 1
+  JUMP LOOP_ALL
+DRAW_CAR_R:
+  MOV [26], 1
+  MOV [27], 1
+  MOV [30], 1
+  MOV [31], 1
+  JUMP LOOP_ALL

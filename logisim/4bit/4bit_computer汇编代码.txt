@@ -1,0 +1,4 @@
+LOOP:
+  MOV [0], 4
+  OUT [0]
+  JUMP LOOP

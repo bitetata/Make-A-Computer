@@ -1,0 +1,16 @@
+  MOV [0], 0
+  MOV [1], 1
+  MOV [3], 2
+  MOV [4], 4
+LOOP:
+  OUT [0]
+  IN [5]
+  JUMPIF KEY2, [5], [4]
+  JUMPIF KEY1, [5], [3]
+  JUMP LOOP
+ KEY1:
+    ADD [0], [0], [1]
+    JUMP LOOP
+ KEY2:
+    MOV [0], 0
+    JUMP LOOP

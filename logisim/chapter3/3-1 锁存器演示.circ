@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="west"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(490,90)" to="(490,160)"/>
+    <wire from="(50,250)" to="(50,380)"/>
+    <wire from="(70,660)" to="(130,660)"/>
+    <wire from="(70,620)" to="(130,620)"/>
+    <wire from="(130,380)" to="(190,380)"/>
+    <wire from="(180,630)" to="(240,630)"/>
+    <wire from="(130,650)" to="(130,660)"/>
+    <wire from="(130,620)" to="(130,630)"/>
+    <wire from="(510,210)" to="(510,350)"/>
+    <wire from="(50,380)" to="(100,380)"/>
+    <wire from="(120,230)" to="(170,230)"/>
+    <wire from="(50,130)" to="(50,210)"/>
+    <wire from="(530,350)" to="(530,440)"/>
+    <wire from="(780,130)" to="(780,160)"/>
+    <wire from="(170,210)" to="(170,230)"/>
+    <wire from="(660,230)" to="(760,230)"/>
+    <wire from="(640,130)" to="(640,210)"/>
+    <wire from="(210,210)" to="(210,300)"/>
+    <wire from="(230,350)" to="(230,440)"/>
+    <wire from="(190,130)" to="(190,160)"/>
+    <wire from="(190,350)" to="(190,380)"/>
+    <wire from="(660,210)" to="(660,230)"/>
+    <wire from="(760,210)" to="(760,230)"/>
+    <wire from="(780,90)" to="(780,130)"/>
+    <wire from="(640,210)" to="(660,210)"/>
+    <wire from="(190,90)" to="(190,130)"/>
+    <wire from="(510,350)" to="(530,350)"/>
+    <wire from="(50,210)" to="(70,210)"/>
+    <wire from="(50,250)" to="(70,250)"/>
+    <wire from="(50,130)" to="(190,130)"/>
+    <wire from="(130,650)" to="(140,650)"/>
+    <wire from="(130,630)" to="(140,630)"/>
+    <wire from="(470,210)" to="(470,260)"/>
+    <wire from="(50,380)" to="(50,440)"/>
+    <wire from="(640,130)" to="(780,130)"/>
+    <wire from="(800,210)" to="(800,260)"/>
+    <comp lib="6" loc="(778,55)" name="Text">
+      <a name="text" val="发光二极管"/>
+    </comp>
+    <comp lib="6" loc="(91,235)" name="Text">
+      <a name="text" val="与门"/>
+    </comp>
+    <comp lib="6" loc="(51,480)" name="Text">
+      <a name="text" val="锁存信号"/>
+    </comp>
+    <comp lib="1" loc="(130,380)" name="NOT Gate"/>
+    <comp lib="0" loc="(800,260)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="4" loc="(180,630)" name="D Flip-Flop">
+      <a name="trigger" val="low"/>
+    </comp>
+    <comp lib="6" loc="(433,508)" name="Text">
+      <a name="text" val="当锁存信号为0的时候"/>
+    </comp>
+    <comp lib="6" loc="(114,403)" name="Text">
+      <a name="text" val="非门"/>
+    </comp>
+    <comp lib="6" loc="(64,692)" name="Text">
+      <a name="text" val="输入信号"/>
+    </comp>
+    <comp lib="6" loc="(781,192)" name="Text">
+      <a name="text" val="或门"/>
+    </comp>
+    <comp lib="1" loc="(190,160)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="5" loc="(240,630)" name="LED"/>
+    <comp lib="6" loc="(211,332)" name="Text">
+      <a name="text" val="与门"/>
+    </comp>
+    <comp lib="6" loc="(531,479)" name="Text">
+      <a name="text" val="输入信号"/>
+    </comp>
+    <comp lib="0" loc="(70,660)" name="Clock"/>
+    <comp lib="1" loc="(120,230)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(210,300)" name="AND Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="5" loc="(780,90)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(470,260)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(780,160)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(231,479)" name="Text">
+      <a name="text" val="输入信号"/>
+    </comp>
+    <comp lib="6" loc="(191,192)" name="Text">
+      <a name="text" val="或门"/>
+    </comp>
+    <comp lib="5" loc="(490,90)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(190,90)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(188,55)" name="Text">
+      <a name="text" val="发光二极管"/>
+    </comp>
+    <comp lib="6" loc="(488,55)" name="Text">
+      <a name="text" val="发光二极管"/>
+    </comp>
+    <comp lib="6" loc="(724,508)" name="Text">
+      <a name="text" val="当锁存信号为1的时候"/>
+    </comp>
+    <comp lib="0" loc="(530,440)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(230,440)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(490,160)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(491,192)" name="Text">
+      <a name="text" val="或门"/>
+    </comp>
+    <comp lib="0" loc="(50,440)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(70,620)" name="Clock"/>
+    <comp lib="6" loc="(58,600)" name="Text">
+      <a name="text" val="锁存信号"/>
+    </comp>
+  </circuit>
+</project>

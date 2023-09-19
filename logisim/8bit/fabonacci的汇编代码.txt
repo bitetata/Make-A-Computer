@@ -1,0 +1,16 @@
+  MOV [0], 0
+  MOV [1], 1
+  MOV [6], 1
+  MOV [7], 1
+  MOV [8], 0
+  MOV [11], 0
+  MOV [12], 10
+LOOP:
+  ADD [8], [6], [7]
+  ADD [6], [7], [0]
+  ADD [7], [8], [0]
+  ADD [11], [11], [1]
+  JUMPIF EXIT, [11], [12]  
+  JUMP LOOP
+EXIT:
+  OUT [7]
