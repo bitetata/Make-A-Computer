@@ -5,3 +5,4 @@
 * [Gitbook阅读](https://bite01.gitbook.io/ru-he-zhi-zuo-yi-tai-ji-suan-ji/)
 * [YouTube频道](https://www.youtube.com/channel/UCqVnqH7kqSC7nRuaIt3HKAw)
 * [bilibili频道](https://space.bilibili.com/481160192)
+* [QQ群897904891](https://qm.qq.com/cgi-bin/qm/qr?k=g9DANfzKwpdY2_ookZuPGK42FcmEcI2O&jump_from=webapi&authKey=v55fBJJFxMtXbss/ceWVnsmt1rt3nuiLUNHjABIf8qRSfCJXnSVpwVCJxvmGvlo2)
