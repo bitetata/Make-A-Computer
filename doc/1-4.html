@@ -1,0 +1,778 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>使用Logisim演示二进制数字 · 制作一台计算机</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Bite01">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-0.html" />
+    
+    
+    <link rel="prev" href="1-3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-0.html">
+            
+                <a href="1-0.html">
+            
+                    
+                    Logisim软件和二进制数字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1-1.html">
+            
+                <a href="1-1.html">
+            
+                    
+                    Logisim简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1-2.html">
+            
+                <a href="1-2.html">
+            
+                    
+                    初探Logisim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1-3.html">
+            
+                <a href="1-3.html">
+            
+                    
+                    什么是二进制数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="1-4.html">
+            
+                <a href="1-4.html">
+            
+                    
+                    使用Logisim演示二进制数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-0.html">
+            
+                <a href="2-0.html">
+            
+                    
+                    逻辑门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2-1.html">
+            
+                <a href="2-1.html">
+            
+                    
+                    非门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2-2.html">
+            
+                <a href="2-2.html">
+            
+                    
+                    或门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2-3.html">
+            
+                <a href="2-3.html">
+            
+                    
+                    与门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-0.html">
+            
+                <a href="3-0.html">
+            
+                    
+                    锁存器和触发器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3-1.html">
+            
+                <a href="3-1.html">
+            
+                    
+                    锁存器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3-2.html">
+            
+                <a href="3-2.html">
+            
+                    
+                    触发器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-0.html">
+            
+                <a href="4-0.html">
+            
+                    
+                    集成电路
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    数字译码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    只读存储器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="4-3.html">
+            
+                <a href="4-3.html">
+            
+                    
+                    随机存取存储器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4-4.html">
+            
+                <a href="4-4.html">
+            
+                    
+                    十六进制数码管
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="4-5.html">
+            
+                <a href="4-5.html">
+            
+                    
+                    加法器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="4-6.html">
+            
+                <a href="4-6.html">
+            
+                    
+                    比较器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-0.html">
+            
+                <a href="5-0.html">
+            
+                    
+                    开始制作计算机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="5-1.html">
+            
+                <a href="5-1.html">
+            
+                    
+                    制作一个能够执行指令的计算机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="5-2.html">
+            
+                <a href="5-2.html">
+            
+                    
+                    制作一个能做加法运算的计算机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="5-3.html">
+            
+                <a href="5-3.html">
+            
+                    
+                    制作一个带有内存的计算机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="5-4.html">
+            
+                <a href="5-4.html">
+            
+                    
+                    制作一个支持条件跳转的计算机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="5-5.html">
+            
+                <a href="5-5.html">
+            
+                    
+                    制作一个带按键输入的计算机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-0.html">
+            
+                <a href="6-0.html">
+            
+                    
+                    汇编语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="6-1.html">
+            
+                <a href="6-1.html">
+            
+                    
+                    MOV指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="6-2.html">
+            
+                <a href="6-2.html">
+            
+                    
+                    ADD指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="6-3.html">
+            
+                <a href="6-3.html">
+            
+                    
+                    JUMP指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="6-4.html">
+            
+                <a href="6-4.html">
+            
+                    
+                    JUMPIF指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="6-5.html">
+            
+                <a href="6-5.html">
+            
+                    
+                    OUT指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="6-6.html">
+            
+                <a href="6-6.html">
+            
+                    
+                    IN指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="6-7.html">
+            
+                <a href="6-7.html">
+            
+                    
+                    汇编器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-0.html">
+            
+                <a href="7-0.html">
+            
+                    
+                    汇编实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="7-1.html">
+            
+                <a href="7-1.html">
+            
+                    
+                    一段计算机的故事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="7-2.html">
+            
+                <a href="7-2.html">
+            
+                    
+                    fabonacci数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="7-3.html">
+            
+                <a href="7-3.html">
+            
+                    
+                    按键计数功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="7-4.html">
+            
+                <a href="7-4.html">
+            
+                    
+                    一个躲车小游戏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8-0.html">
+            
+                <a href="8-0.html">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >使用Logisim演示二进制数字</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F7F;&#x7528;logisim&#x6F14;&#x793A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;">&#x4F7F;&#x7528;Logisim&#x6F14;&#x793A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;</h1>
+<p>&#x6211;&#x4EEC;&#x672C;&#x6765;&#x4E0D;&#x662F;&#x5728;&#x8BB2;Logisim&#x8F6F;&#x4EF6;&#x4E2D;&#x5982;&#x4F55;&#x7ED8;&#x5236;&#x7535;&#x8DEF;&#x56FE;&#x7684;&#x4E48;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x7A81;&#x7136;&#x63D2;&#x5165;&#x4E86;&#x4E00;&#x8282;&#x201C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x201D;&#x7684;&#x7AE0;&#x8282;&#x5462;&#xFF1F;&#x8FD8;&#x8BB0;&#x5F97;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x6211;&#x63D0;&#x5230;&#x8FC7;&#x201C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x7535;&#x5B50;&#x5143;&#x4EF6;&#x7684;&#x8F93;&#x5165;&#x7AEF;&#x5E26;&#x7535;&#xFF0C;&#x6211;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#x6210;&#x8BE5;&#x7535;&#x5B50;&#x5143;&#x4EF6;&#x7684;&#x8F93;&#x5165;&#x7AEF;&#x4E3A;1&#x201D;&#x4E48;&#xFF1F;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;&#x201C;&#x53D1;&#x5149;&#x4E8C;&#x6781;&#x7BA1;&#x201D;&#x88AB;&#x70B9;&#x4EAE;&#xFF0C;&#x6211;&#x4EEC;&#x8BF4;&#x5B83;&#x4EE3;&#x8868;1&#xFF0C;&#x5982;&#x679C;&#x7184;&#x706D;&#x5C31;&#x4EE3;&#x8868;0&#x3002;&#x90A3;&#x4E00;&#x6392;&#x6709;&#x4EAE;&#x6709;&#x706D;&#x201C;&#x53D1;&#x5149;&#x4E8C;&#x6781;&#x7BA1;&#x201D;&#x5462;&#xFF1F;&#x662F;&#x4E0D;&#x662F;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x6210;10101&#x8FD9;&#x79CD;&#x4FE1;&#x606F;&#x5462;&#xFF1F;&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#xFF01;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6709;&#x4E00;&#x6392;&#x5E26;&#x7535;&#x6216;&#x4E0D;&#x5E26;&#x7535;&#x7684;&#x5BFC;&#x7EBF;&#xFF0C;&#x5B83;&#x4EEC;&#x4F20;&#x8F93;&#x7684;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x7535;&#x4FE1;&#x53F7;&#xFF0C;&#x800C;&#x662F;&#x53EF;&#x4EE5;&#x5F53;&#x4F5C;&#x6709;&#x610F;&#x4E49;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x4FE1;&#x606F;&#x3002;&#x6700;&#x76F4;&#x89C2;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E9B;&#x4E8C;&#x8FDB;&#x5236;&#x4FE1;&#x606F;&#x5F53;&#x4F5C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x3002;&#x65E2;&#x7136;&#x9AD8;&#x4F4E;&#x7535;&#x5E73;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5728;Logisim&#x8F6F;&#x4EF6;&#x4E2D;&#x6765;&#x6F14;&#x793A;&#x4E0B;&#x524D;&#x4E00;&#x8282;&#x4E2D;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#x5173;&#x7CFB;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x6211;&#x4EEC;&#x7ED8;&#x5236;&#x4E24;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7535;&#x8DEF;&#x56FE;&#xFF0C;&#x7528;&#x6765;&#x6F14;&#x793A;&#x201C;&#x4E8C;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x5341;&#x8FDB;&#x5236;&#x201D;&#x548C;&#x201C;&#x5341;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x4E8C;&#x8FDB;&#x5236;&#x201D;&#x7684;&#x539F;&#x7406;&#x3002;&#x8FD9;&#x91CC;&#x7528;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8F85;&#x52A9;&#x7535;&#x5B50;&#x5143;&#x4EF6;&#x201C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x7801;&#x7BA1;&#x201D;&#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x201C;&#x5BFC;&#x7EBF;&#x62C6;&#x5206;&#x5668;&#x201D;&#x5408;&#x5E76;&#x540E;&#x7684;&#x9ED1;&#x8272;&#x5BFC;&#x7EBF;&#xFF0C;&#x4ECE;&#x4F4E;&#x5230;&#x9AD8;&#x4F4D;&#x7684;&#x6BCF;&#x4E00;&#x4F4D;&#x6240;&#x4EE3;&#x8868;&#x7684;01&#x503C;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#xFF0C;&#x6700;&#x7EC8;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;&#x6BD4;&#x5982;&#x201C;&#x5BFC;&#x7EBF;&#x62C6;&#x5206;&#x5668;&#x201D;&#x628A;4&#x8DDF;&#x5BFC;&#x7EBF;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x6839;&#x9ED1;&#x8272;&#x5BFC;&#x7EBF;&#x540E;&#xFF0C;&#x7B2C;1&#x6839;&#x662F;&#x9AD8;&#x7535;&#x5E73;&#xFF0C;&#x7B2C;2&#x6839;&#x662F;&#x9AD8;&#x7535;&#x5E73;&#xFF0C;&#x7B2C;3&#x6839;&#x662F;&#x4F4E;&#x7535;&#x5E73;&#xFF0C;&#x7B2C;4&#x6839;&#x662F;&#x4F4E;&#x7535;&#x5E73;&#xFF0C;&#x4E8E;&#x662F;&#x5B83;&#x4EEC;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x5C31;&#x662F;0011&#xFF0C;&#x6700;&#x7EC8;&#x201C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x7801;&#x7BA1;&#x201D;&#x663E;&#x793A;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;3&#xFF0C;&#x56E0;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x7684;11&#x7B49;&#x4E8E;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;3&#x3002;</p>
+<p><img src="pic/1-6.gif" alt=""></p>
+<p>&#x540C;&#x65F6;&#x8FD9;&#x6B21;&#x4F7F;&#x7528;&#x7684;&#x201C;&#x5E38;&#x91CF;&#x53D1;&#x751F;&#x5668;&#x201D;&#x4E5F;&#x53D8;&#x6210;&#x4E86;&#x591A;&#x4F4D;&#xFF0C;&#x4F60;&#x4ED4;&#x7EC6;&#x89C2;&#x5BDF;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x201C;&#x5E38;&#x91CF;&#x53D1;&#x751F;&#x5668;&#x201D;&#x662F;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5728;&#x201C;&#x5BFC;&#x7EBF;&#x62C6;&#x5206;&#x5668;&#x201D;&#x5408;&#x5E76;&#x540E;&#x7684;&#x9ED1;&#x8272;&#x5BFC;&#x7EBF;&#xFF0C;&#x7531;&#x4E8E;&#x9ED1;&#x8272;&#x5BFC;&#x7EBF;&#x662F;&#x7531;4&#x6839;&#x5BFC;&#x7EBF;&#x7EC4;&#x6210;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;4&#x4F4D;&#xFF0C;&#x6240;&#x4EE5;&#x201C;&#x5E38;&#x91CF;&#x53D1;&#x751F;&#x5668;&#x201D;&#x7684;&#x5C5E;&#x6027;&#x680F;&#x4E5F;&#x8981;&#x6539;&#x6210;4&#x4F4D;&#x3002;&#x201C;&#x5E38;&#x91CF;&#x53D1;&#x751F;&#x5668;&#x201D;&#x7684;&#x5C5E;&#x6027;&#x680F;&#x91CC;&#x9762;&#x7684;&#x503C;&#x6700;&#x7EC8;&#x4F1A;&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#x7684;&#x503C;&#xFF0C;&#x5BF9;&#x5E94;&#x5230;&#x9ED1;&#x8272;&#x5BFC;&#x7EBF;&#x4E2D;&#x7684;&#x6BCF;&#x6839;&#x5BFC;&#x7EBF;&#x4E0A;&#x3002;&#x6BD4;&#x5982;&#x201C;&#x5E38;&#x91CF;&#x53D1;&#x751F;&#x5668;&#x201D;&#x7684;&#x503C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4F4D;0x5&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5C31;&#x7B49;&#x4E8E;0101&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x9ED1;&#x8272;&#x5BFC;&#x7EBF;&#x4E2D;&#x7684;&#x7B2C;1&#x6839;&#x548C;&#x7B2C;3&#x6839;&#x4E3A;&#x9AD8;&#x7535;&#x5E73;&#xFF0C;&#x5176;&#x5B83;&#x4E3A;&#x4F4E;&#x7535;&#x5E73;&#x3002;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x4E2D;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7535;&#x5B50;&#x5143;&#x4EF6;&#x90FD;&#x652F;&#x6301;&#x591A;&#x4F4D;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x7535;&#x8DEF;&#x56FE;&#x4E2D;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5F88;&#x591A;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5BFC;&#x7EBF;&#x548C;&#x5BFC;&#x7EBF;&#x62C6;&#x5206;&#x5668;&#xFF0C;&#x8FDB;&#x800C;&#x4F7F;&#x5F97;&#x7535;&#x8DEF;&#x56FE;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1-3.html" class="navigation navigation-prev " aria-label="Previous page: 什么是二进制数字">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2-0.html" class="navigation navigation-next " aria-label="Next page: 逻辑门">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"使用Logisim演示二进制数字","level":"1.2.4","depth":2,"next":{"title":"逻辑门","level":"1.3","depth":1,"path":"doc/2-0.md","ref":"doc/2-0.md","articles":[{"title":"非门","level":"1.3.1","depth":2,"path":"doc/2-1.md","ref":"doc/2-1.md","articles":[]},{"title":"或门","level":"1.3.2","depth":2,"path":"doc/2-2.md","ref":"doc/2-2.md","articles":[]},{"title":"与门","level":"1.3.3","depth":2,"path":"doc/2-3.md","ref":"doc/2-3.md","articles":[]}]},"previous":{"title":"什么是二进制数字","level":"1.2.3","depth":2,"path":"doc/1-3.md","ref":"doc/1-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","katex","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Bite01","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"制作一台计算机","language":"zh-hans","gitbook":"3.2.3"},"file":{"path":"doc/1-4.md","mtime":"2023-09-20T04:38:39.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-20T07:32:49.833Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
