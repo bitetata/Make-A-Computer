@@ -4,6 +4,8 @@
 * [Logisim软件和二进制数字](doc/1-0.md)
   * [Logisim简介](doc/1-1.md)
   * [初探Logisim](doc/1-2.md)
+  * [什么是二进制数字](doc/1-3.md)
+  * [使用Logisim演示二进制数字](doc/1-4.md)
 * [逻辑门](doc/2-0.md)
   * [非门](doc/2-1.md)
   * [或门](doc/2-2.md)

@@ -10,7 +10,8 @@
         "readme": "README.md"
     },
     "plugins": [
-        "-sharing"
+        "-sharing",
+        "katex"
     ],
     "pluginsConfig": {
         "sharing": {
