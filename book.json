@@ -11,6 +11,7 @@
     },
     "plugins": [
         "-sharing",
+        "-livereload",
         "katex"
     ],
     "pluginsConfig": {
