@@ -83,72 +83,99 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(680,220)" to="(680,230)"/>
     <wire from="(720,240)" to="(840,240)"/>
+    <wire from="(610,150)" to="(800,150)"/>
     <wire from="(120,220)" to="(170,220)"/>
-    <wire from="(550,260)" to="(590,260)"/>
     <wire from="(120,130)" to="(120,220)"/>
-    <wire from="(560,80)" to="(560,100)"/>
-    <wire from="(560,120)" to="(560,140)"/>
-    <wire from="(570,130)" to="(570,170)"/>
     <wire from="(100,120)" to="(130,120)"/>
     <wire from="(770,170)" to="(770,210)"/>
-    <wire from="(550,320)" to="(570,320)"/>
     <wire from="(820,180)" to="(820,220)"/>
-    <wire from="(570,280)" to="(590,280)"/>
     <wire from="(610,200)" to="(630,200)"/>
     <wire from="(770,170)" to="(800,170)"/>
-    <wire from="(770,150)" to="(800,150)"/>
-    <wire from="(560,100)" to="(590,100)"/>
-    <wire from="(560,120)" to="(590,120)"/>
     <wire from="(650,230)" to="(680,230)"/>
-    <wire from="(770,90)" to="(770,150)"/>
-    <wire from="(550,290)" to="(560,290)"/>
-    <wire from="(550,230)" to="(560,230)"/>
     <wire from="(720,230)" to="(720,240)"/>
     <wire from="(70,220)" to="(120,220)"/>
-    <wire from="(550,110)" to="(590,110)"/>
     <wire from="(660,200)" to="(700,200)"/>
-    <wire from="(560,230)" to="(560,250)"/>
-    <wire from="(560,270)" to="(560,290)"/>
     <wire from="(820,220)" to="(840,220)"/>
-    <wire from="(570,280)" to="(570,320)"/>
     <wire from="(870,230)" to="(890,230)"/>
-    <wire from="(610,200)" to="(610,240)"/>
     <wire from="(70,240)" to="(100,240)"/>
-    <wire from="(550,170)" to="(570,170)"/>
-    <wire from="(570,130)" to="(590,130)"/>
     <wire from="(680,220)" to="(700,220)"/>
     <wire from="(310,110)" to="(330,110)"/>
-    <wire from="(610,90)" to="(770,90)"/>
     <wire from="(740,210)" to="(770,210)"/>
-    <wire from="(560,250)" to="(590,250)"/>
-    <wire from="(560,270)" to="(590,270)"/>
     <wire from="(150,110)" to="(170,110)"/>
     <wire from="(250,240)" to="(330,240)"/>
     <wire from="(210,240)" to="(220,240)"/>
     <wire from="(120,130)" to="(130,130)"/>
     <wire from="(100,120)" to="(100,240)"/>
     <wire from="(100,240)" to="(170,240)"/>
-    <wire from="(550,140)" to="(560,140)"/>
-    <wire from="(550,80)" to="(560,80)"/>
-    <comp lib="6" loc="(788,415)" name="Text">
-      <a name="text" val="考虑公式A+16-B，当A&lt;B的时候，不会溢出，当A&gt;=B的时候，会溢出"/>
+    <comp lib="3" loc="(210,230)" name="Comparator">
+      <a name="width" val="4"/>
     </comp>
-    <comp lib="6" loc="(797,473)" name="Text">
-      <a name="text" val="结果只要有加法溢位，就说明A&gt;=B。所以把它们溢出位进行一下“或”计算"/>
+    <comp lib="4" loc="(310,110)" name="ROM">
+      <a name="dataWidth" val="1"/>
+      <a name="contents">addr/data: 8 1
+1 15*0 1 1 14*0 1 1 1
+13*0 4*1 12*0 5*1 11*0 6*1 10*0 7*1
+9*0 8*1 8*0 9*1 7*0 10*1 6*0 11*1
+5*0 12*1 4*0 13*1 0 0 0 14*1
+0 0 15*1 0 16*1
+</a>
     </comp>
-    <comp lib="0" loc="(610,90)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(550,140)" name="Clock"/>
+    <comp lib="1" loc="(250,240)" name="NOT Gate"/>
     <comp lib="3" loc="(740,210)" name="Adder">
       <a name="width" val="4"/>
     </comp>
-    <comp lib="6" loc="(702,364)" name="Text">
+    <comp lib="6" loc="(797,358)" name="Text">
+      <a name="text" val="考虑公式A+16-B，当A&lt;B的时候，不会溢出，当A&gt;=B的时候，会溢出"/>
+    </comp>
+    <comp lib="6" loc="(771,398)" name="Text">
+      <a name="text" val="其中，16-B等同于把B的每一位取反再加1。最后再与A相加"/>
+    </comp>
+    <comp lib="5" loc="(330,110)" name="LED"/>
+    <comp lib="5" loc="(890,230)" name="LED"/>
+    <comp lib="6" loc="(768,336)" name="Text">
+      <a name="text" val="设输入端为A和B，4位二进制数字如果数到16就会进位溢出"/>
+    </comp>
+    <comp lib="3" loc="(840,160)" name="Adder">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="6" loc="(204,306)" name="Text">
+      <a name="text" val="使用ROM制作的比较器，上下作为对比"/>
+    </comp>
+    <comp lib="0" loc="(650,230)" name="Constant">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(610,150)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="6" loc="(806,416)" name="Text">
+      <a name="text" val="结果只要有加法溢位，就说明A&gt;=B。所以把它们溢出位进行一下“或”计算"/>
+    </comp>
+    <comp lib="6" loc="(711,307)" name="Text">
       <a name="text" val="扩展内容：使用加法器制作的比较器，这样可以节省大量内存"/>
     </comp>
-    <comp lib="0" loc="(550,290)" name="Clock"/>
+    <comp lib="6" loc="(580,336)" name="Text">
+      <a name="text" val="原理简介："/>
+    </comp>
+    <comp lib="1" loc="(870,230)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(660,200)" name="NOT Gate">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(70,240)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="0" loc="(610,200)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="5" loc="(330,240)" name="LED"/>
+    <comp lib="6" loc="(723,378)" name="Text">
+      <a name="text" val="即我们可以通过溢出位来判断A和B的大小"/>
+    </comp>
     <comp lib="0" loc="(150,110)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="8"/>
@@ -160,68 +187,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="1" loc="(870,230)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="3" loc="(210,230)" name="Comparator">
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="5" loc="(330,110)" name="LED"/>
-    <comp lib="0" loc="(650,230)" name="Constant">
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="6" loc="(571,393)" name="Text">
-      <a name="text" val="原理简介："/>
-    </comp>
-    <comp lib="0" loc="(550,260)" name="Clock"/>
-    <comp lib="0" loc="(550,110)" name="Clock"/>
-    <comp lib="6" loc="(759,393)" name="Text">
-      <a name="text" val="设输入端为A和B，4位二进制数字如果数到16就会进位溢出"/>
-    </comp>
     <comp lib="0" loc="(70,220)" name="Constant">
       <a name="width" val="4"/>
     </comp>
-    <comp lib="6" loc="(714,435)" name="Text">
-      <a name="text" val="即我们可以通过溢出位来判断A和B的大小"/>
-    </comp>
-    <comp lib="0" loc="(550,320)" name="Clock"/>
-    <comp lib="6" loc="(762,455)" name="Text">
-      <a name="text" val="其中，16-B等同于把B的每一位取反再加1。最后再与A相加"/>
-    </comp>
-    <comp lib="0" loc="(610,240)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="6" loc="(204,306)" name="Text">
-      <a name="text" val="使用ROM制作的比较器，上下作为对比"/>
-    </comp>
-    <comp lib="1" loc="(660,200)" name="NOT Gate">
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(70,240)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0x3"/>
-    </comp>
-    <comp lib="5" loc="(330,240)" name="LED"/>
-    <comp lib="0" loc="(550,80)" name="Clock"/>
-    <comp lib="1" loc="(250,240)" name="NOT Gate"/>
-    <comp lib="0" loc="(550,230)" name="Clock"/>
-    <comp lib="3" loc="(840,160)" name="Adder">
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="5" loc="(890,230)" name="LED"/>
-    <comp lib="4" loc="(310,110)" name="ROM">
-      <a name="dataWidth" val="1"/>
-      <a name="contents">addr/data: 8 1
-1 15*0 1 1 14*0 1 1 1
-13*0 4*1 12*0 5*1 11*0 6*1 10*0 7*1
-9*0 8*1 8*0 9*1 7*0 10*1 6*0 11*1
-5*0 12*1 4*0 13*1 0 0 0 14*1
-0 0 15*1 0 16*1
-</a>
-    </comp>
-    <comp lib="0" loc="(550,170)" name="Clock"/>
   </circuit>
 </project>
